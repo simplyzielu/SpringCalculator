@@ -36,17 +36,11 @@ public class CalculatorController {
 
     @GetMapping("/divide")
     public int divide(@RequestParam int a, @RequestParam int b) {
-        if (b == 0) {
-            throw new IllegalArgumentException("Division by zero is not allowed.");
-        }
         return calculatorService.divide(a, b);
     }
 
     @GetMapping("/modulo")
     public int modulo(@RequestParam int a, @RequestParam int b) {
-        if (b == 0) {
-            throw new IllegalArgumentException("Modulo by zero is not allowed.");
-        }
         return calculatorService.modulo(a, b);
     }
 
