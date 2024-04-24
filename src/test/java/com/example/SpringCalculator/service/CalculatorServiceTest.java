@@ -1,33 +1,25 @@
 package com.example.SpringCalculator.service;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorServiceTest {
 
-    //Chciałem się bawić w tworzenie stałych, ale to chyba nie ma sensu w przypadku testowania
-    //takich niskopoziomowych metod, gdzie tak czy inaczej te wartości wykorzystywane są tylko raz
-    private CalculatorService calculatorService;
-
-    @BeforeEach
-    public void setUp() {
-        calculatorService = new CalculatorService();
-    }
+    private CalculatorService calculatorService = new CalculatorService();
 
     @Test
-    public void testAdd() {
+    public void shouldAddTwoPassedArguments() {
         assertEquals(4, calculatorService.add(2, 2));
     }
 
     @Test
-    public void testSubtract() {
+    public void shouldSubtractTwoPassedArguments() {
         assertEquals(3, calculatorService.subtract(5, 2));
     }
 
     @Test
-    public void testMultiply() {
+    public void shouldMultiplyTwoPassedArguments() {
         assertEquals(10, calculatorService.multiply(2, 5));
     }
 
